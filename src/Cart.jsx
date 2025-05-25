@@ -12,7 +12,7 @@ export default function Cart(props) {
     expression = (
       <>
         <img
-          src="./src/assets/images/illustration-empty-cart.svg"
+          src="./assets/images/illustration-empty-cart.svg"
           alt="cart empty"
           className="w-2/3 mx-auto my-8"
         />
@@ -50,7 +50,7 @@ export default function Cart(props) {
                 props.setCartItems(newMap);
             }}
             
-            src="./src/assets/images/icon-remove-item.svg" alt="remove item" className="cursor-pointer border-[1px] border-gray-300 p-2 rounded-full" />
+            src="./assets/images/icon-remove-item.svg" alt="remove item" className="cursor-pointer border-[1px] border-gray-300 p-2 rounded-full" />
           </div>
         </div>
         
@@ -60,7 +60,7 @@ export default function Cart(props) {
         <p className="text-3xl font-semibold">${total.toFixed(2)}</p>
       </div>
       <div className=" mx-auto rounded-lg flex flex-row bg-rose-100 w-[95%] justify-between items-center px-3 py-3 text-sm mt-4">
-        <img src="./src/assets/images/icon-carbon-neutral.svg" />
+        <img src="./assets/images/icon-carbon-neutral.svg" />
         <p>This is a <span className="font-semibold">carbon-neutral</span> delivery.</p>
       </div>
       <div className="mx-auto w-[95%]">

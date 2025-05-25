@@ -32,7 +32,7 @@ export default function AddToCart(props) {
           className="flex flex-row bg-white px-4 py-3 border-1 border-red rounded-full justify-between items-center gap-x-3"
         >
           <img
-            src="./src/assets/images/icon-add-to-cart.svg"
+            src="./assets/images/icon-add-to-cart.svg"
             alt="add to cart"
           />
           <span className="text-sm font-semibold">Add to cart</span>
@@ -60,14 +60,14 @@ export default function AddToCart(props) {
               props.setCartItems(newMap);
             }}
             className="cursor-pointer border-1 py-2 px-1 rounded-full border-white"
-            src="./src/assets/images/icon-decrement-quantity.svg"
+            src="./assets/images/icon-decrement-quantity.svg"
             alt="minus"
           />
           <p className="text-white font-bold">{quantity}</p>
           <img
             onClick={() => addItem(props.elem)}
             className="cursor-pointer   border-1  py-1 px-1 rounded-full border-white"
-            src="./src/assets/images/icon-increment-quantity.svg"
+            src="./assets/images/icon-increment-quantity.svg"
             alt="plus"
           />
         </div>

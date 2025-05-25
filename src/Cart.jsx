@@ -73,14 +73,15 @@ export default function Cart(props) {
     </>;
 
     otherExp = <>
+    <div className="overflow-y-scroll max-h-70">
     {Array.from(props.cartItems.entries()).map(([key, item]) => (
-
+      
         <div
           key={key}
           className="flex flex-row justify-between items-center mb-2 py-4 border-b-[1px] border-b-rose-300/50"
         >
-        <img className="w-1/5 rounded-lg" src={item.image.thumbnail} alt="thumb" />
-          <div className="flex flex-col">
+        <img className="w-1/5 rounded-lg lg:w-[80px]" src={item.image.thumbnail} alt="thumb" />
+          <div className="flex flex-col lg:gap-x-2">
             <div>
             <h3 className="font-bold text-rose-500">{item.name}</h3>
             </div>
@@ -94,8 +95,9 @@ export default function Cart(props) {
             <p  className="text-rose-500 font-bold">${(item.quantity * item.price).toFixed(2)}</p>
           </div>
         </div>
-        
+      
       ))}
+      </div>
       <div className="flex flex-row mt-3 justify-between items-center">
         <h1 className="text-rose-500 font-semibold">Order Total</h1>
         <p className="text-3xl font-semibold">${total.toFixed(2)}</p>
@@ -111,6 +113,7 @@ export default function Cart(props) {
   }
   return (
     <>
+    <div className="lg:w-[40%] lg:my-10">
       <div className="w-[85%] mx-auto my-3 bg-white rounded-xl p-4">
         <h1 className="text-2xl font-bold text-rose-700">
           Your Cart (<span>{props.cartItems.size}</span>)
@@ -118,6 +121,8 @@ export default function Cart(props) {
         <div className="flex flex-col">{expression}</div>
       </div>
      <Confirmation confirm={confirm} expression={otherExp}/>
+    </div>
     </>
+    
   );
 }

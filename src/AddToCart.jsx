@@ -3,6 +3,7 @@ export default function AddToCart(props) {
     const key = obj.name;
     const newMap = new Map(props.cartItems);
     const existing = newMap.get(key);
+    
 
     if (existing) {
       newMap.set(key, {
@@ -26,6 +27,7 @@ export default function AddToCart(props) {
     expression = (
       <>
         <div
+        onFocus={() => setSel(true)}
           onClick={() => addItem(props.elem)}
           className="flex flex-row bg-white px-4 py-3 border-1 border-red rounded-full justify-between items-center gap-x-3"
         >

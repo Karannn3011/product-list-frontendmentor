@@ -8,8 +8,10 @@ function App() {
   
   return (
     <>
+    <div className="lg:flex flex-row">
       <Item Data={Data} cartItems={cartItems} setCartItems={setCartItems} />
       <Cart cartItems={cartItems} setCartItems={setCartItems} />
+      </div>
     </>
   );
 }
